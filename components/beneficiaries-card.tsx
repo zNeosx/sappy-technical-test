@@ -80,7 +80,7 @@ const BeneficiariesCard = ({
           </DialogContent>
         </Dialog>
       ) : (
-        <p className="text-blue-2 text-sm font-normal leading-none mt-2 cursor-pointer">
+        <p className="text-blue-2 text-sm font-normal leading-none mt-2">
           <span className="underline">{reports?.length} rapports</span> d'humeur
         </p>
       )}
