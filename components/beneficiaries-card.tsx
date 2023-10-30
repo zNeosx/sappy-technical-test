@@ -1,36 +1,27 @@
 import Image from "next/image";
-import React from "react";
 import { Button } from "./ui/button";
 import {
   Dialog,
-  DialogTrigger,
-  DialogHeader,
   DialogContent,
-  DialogTitle,
   DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
 } from "./ui/dialog";
 
 import moodReportSrc from "@/public/images/mood-report.png";
+import { IBeneficiaries } from "@/types";
 import ReportForm from "./report-form";
 import { ScrollArea } from "./ui/scroll-area";
 
-interface Props {
-  id: string;
-  name: string;
-  age: number;
-  city: string;
-  image: string;
-  reports?: any;
-}
 const BeneficiariesCard = ({
-  id,
+  _id,
   name = "Jean-Hugues L.",
   age = 76,
   city = "Sainte-Suzanne",
   image = "https://via.placeholder.com/48x48",
-  reports = ["report1", "report2"],
-}: Props) => {
-  console.log("reports", reports);
+  reports,
+}: IBeneficiaries) => {
   return (
     <div className="rounded-xl p-6 bg-white">
       <div className="flex items-center gap-4">
@@ -117,7 +108,7 @@ const BeneficiariesCard = ({
               <span className="font-bold text-blue-1"> {name}</span>.
             </DialogDescription>
           </DialogHeader>
-          <ReportForm beneficiarieId={id} />
+          <ReportForm beneficiarieId={_id} />
         </DialogContent>
       </Dialog>
     </div>

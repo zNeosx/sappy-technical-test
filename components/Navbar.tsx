@@ -8,8 +8,9 @@ import logo from "@/public/svg/logo.svg";
 import mission from "@/public/svg/mission.svg";
 import { Menu, Play } from "lucide-react";
 import { ActiveLink } from "./active-link";
+import { INavlinks } from "@/types";
 
-const navLinks: any = [
+const navLinks: INavlinks[] = [
   {
     label: "Dashboard",
     href: "/dashboard",
@@ -36,6 +37,7 @@ const navLinks: any = [
     icon: contract,
   },
 ];
+
 const Navbar = () => {
   return (
     <header className="border-b border-zinc-200 bg-white h-[72px]">

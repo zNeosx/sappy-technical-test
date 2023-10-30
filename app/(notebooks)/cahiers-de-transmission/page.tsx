@@ -1,9 +1,10 @@
 import BeneficiariesCard from "@/components/beneficiaries-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { fetchBeneficiaries } from "@/lib/actions/beneficiarie.actions";
+import { IBeneficiaries } from "@/types";
 
 async function TransmissionNotebooks() {
-  const data = await fetchBeneficiaries();
+  const data: Omit<IBeneficiaries, never>[] = await fetchBeneficiaries();
 
   return (
     <section className="container py-14 min-h-screen">
@@ -25,10 +26,10 @@ async function TransmissionNotebooks() {
           className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 py-6"
         >
           {data.length !== 0 ? (
-            data?.map((beneficiarie: any) => (
+            data?.map((beneficiarie: Omit<IBeneficiaries, never>) => (
               <BeneficiariesCard
                 key={beneficiarie._id}
-                id={beneficiarie._id}
+                _id={beneficiarie._id}
                 name={beneficiarie.name}
                 age={beneficiarie.age}
                 city={beneficiarie.city}
