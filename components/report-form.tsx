@@ -13,8 +13,8 @@ const ReportForm = ({ beneficiarieId }: { beneficiarieId: string }) => {
   const { toast } = useToast();
 
   const formSchema = z.object({
-    comments: z.string().min(10, {
-      message: "Username must be at least 10 characters.",
+    comments: z.string().min(3, {
+      message: "Le rapport doit avoir au moins 3 caractères.",
     }),
   });
 
@@ -56,7 +56,7 @@ const ReportForm = ({ beneficiarieId }: { beneficiarieId: string }) => {
                   className="placeholder:text-blue-4"
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-red-600" />
             </FormItem>
           )}
         />
