@@ -82,7 +82,15 @@
     @apply bg-background text-blue-2;
   }
 
-  /* .link-active{
-    @apply after:absolute after:content-[''] after:w-[90%] after:h-[2px] after:-bottom-[2px] after:left-1/2 after:-translate-x-1/2 after:bg-blue-600;
-  } */
+  a, a:hover, .animate {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition:    all .2s ease-in-out;
+    -o-transition:      all .2s ease-in-out;
+    -ms-transition:     all .2s ease-in-out;
+    transition:         all .2s ease-in-out;
+  }
+  
+  .link-active{
+    @apply text-blue-1 after:absolute after:content-[''] after:w-[90%] after:h-[2px] after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-200 after:ease-in-out;
+  }
 }

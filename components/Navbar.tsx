@@ -61,7 +61,7 @@ const Navbar = () => {
             <ActiveLink
               key={link.label}
               href={link.href}
-              className="relative flex items-center gap-2 text-sm font-medium p-2 h-full"
+              className="relative flex items-center gap-2 text-sm font-medium p-2 h-full "
             >
               <Image
                 src={link.icon}

@@ -23,7 +23,8 @@ export const ActiveLink = ({ href, className, children }: Props) => {
       href={href}
       className={clsx(
         className,
-        isActive && "text-blue-1 font-medium  border-b-2 border-primary"
+        isActive && "text-blue-1 font-medium link-active",
+        !isActive && "hover:link-active"
       )}
     >
       {children}
