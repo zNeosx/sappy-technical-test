@@ -10,6 +10,7 @@ import mission from "@/public/svg/mission.svg";
 import { Menu, Play } from "lucide-react";
 import { ActiveLink } from "./active-link";
 import { INavlinks } from "@/types";
+import Link from "next/link";
 
 const navLinks: INavlinks[] = [
   {
@@ -43,13 +44,15 @@ const Navbar = () => {
   return (
     <header className="border-b border-zinc-200 bg-white h-[72px]">
       <nav className="flex items-center justify-between pl-4 py-4 lg:pl-12 lg:py-0 h-full ">
-        <Image
-          src={logo}
-          alt="logo"
-          width={102}
-          height={32}
-          className="object-cover "
-        />
+        <Link href={"/"}>
+          <Image
+            src={logo}
+            alt="logo"
+            width={102}
+            height={32}
+            className="object-cover "
+          />
+        </Link>
 
         <Menu className="lg:hidden" size={32} />
 

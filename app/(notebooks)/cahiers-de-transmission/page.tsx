@@ -17,7 +17,10 @@ async function TransmissionNotebooks() {
       </h2>
       <Tabs defaultValue="beneficiaries" className="w-full my-10">
         <TabsList>
-          <TabsTrigger value="beneficiaries" className="text-xs font-medium">
+          <TabsTrigger
+            value="beneficiaries"
+            className="text-xs font-medium text-primary border-b border-primary"
+          >
             Bénéficiaires actifs
           </TabsTrigger>
         </TabsList>

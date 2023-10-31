@@ -1,0 +1,3 @@
+31/10 : 
+- change favicon.ico with the logo
+- fix id passed to report-form with _id.toString() method

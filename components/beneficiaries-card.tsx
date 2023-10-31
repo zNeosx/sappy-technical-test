@@ -108,7 +108,7 @@ const BeneficiariesCard = ({
               <span className="font-bold text-blue-1"> {name}</span>.
             </DialogDescription>
           </DialogHeader>
-          <ReportForm beneficiarieId={_id} />
+          <ReportForm beneficiarieId={_id.toString()} />
         </DialogContent>
       </Dialog>
     </div>
